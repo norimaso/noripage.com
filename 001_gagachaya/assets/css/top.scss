@@ -1,0 +1,80 @@
+@import './variable';
+
+
+// ==============================================
+// mv
+// ==============================================
+.mv {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    &__slider {
+      @include absolute(100%, 100%, 0, 0, 0, 0, initial, initial, 1);
+      overflow: hidden;
+      &:before {
+        content: '';
+        @include absolute(100%, 100%, 0, 0, 0, 0, initial, initial, 1);
+        background-image: url(../images/img/overlay.png);
+        opacity: .4;
+      }
+    }
+
+    &__slides {
+      @include absolute(100%, 100%, 0, 0, 0, 0, initial, initial, initial);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation-name: slides;
+      -webkit-animation-name: slides;
+      animation-duration: 10s;
+      -webkit-animation-duration: 10s;
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      &:not(:first-child) {
+        display: none;
+        }
+      }
+      @keyframes slides {
+        100% {
+          transform: scale(1.2);
+        }
+      }
+      @-webkit-keyframes slides {
+        100% {
+          transform: scale(1.2);
+        }
+      }
+
+    &__title {
+      @include absolute(initial, initial, 50%, initial, initial, 50%, initial, translate(-50%, -50%), 2);
+      -webkit-transform: translate(-50%, -50%);
+      h1 {
+        span {
+          color: #fff;
+          font-size: 42px;
+          text-shadow: 5px 5px 20px rgba(0, 0, 0, .6);
+        }
+        img {
+          margin: 0 auto;
+          width: 80%;
+          height: auto;
+        }
+      }
+    }
+
+}
+
+// ==============================================
+// main
+// ==============================================
+.main {
+
+  &__section {
+    padding: 80px 0;
+  }
+  
+}
+.section2 {
+  background: #eee;
+}

@@ -1,0 +1,486 @@
+@import './variable';
+@import './reset';
+
+
+html, body {
+    font-family: "Noto Sans JP", "游ゴシック体", "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "meiryo", "MS Pゴシック", "MS PGothic", sans-serif;
+}
+a:hover {
+  opacity: .7;
+}
+img {
+  display: block;
+  pointer-events: none;
+}
+h1, h2, h3, h4, h5 {
+  letter-spacing: 1px;
+}
+p {
+  margin: 0;
+  font-size: 16px;
+  color: $color--text;
+}
+
+// ==============================================
+// common parts
+// ==============================================
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+.fadeIn--btt {
+  opacity: 0;
+  transform: translateY(10px);
+  transition-duration: .4s;
+  -webkit-transition-duration: .4s;
+  transition-timing-function: linear;
+  -webkit-transition-timing-function: linear;
+  &.active {
+      transform: translateY(0px);
+      opacity: 1;
+  }
+}
+.section {
+
+  &__title {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    position: relative;
+    text-align: center;
+    &:before{
+      content: '';
+      @include absolute(80px, 2px, initial, initial, 0, 50%, $color--main, translateX(-50%), initial);
+    }
+    span {
+      // font-size: 14px;
+    }
+    h2 {
+      // font-size: 28px;
+      margin-top: 20px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__btn {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+}
+.btn {
+  padding: 20px 30px 20px 40px;
+  border-radius: 50px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, .2);
+  display: inline-flex;
+  box-sizing: border-box;
+  align-items: center;
+  span {
+    font-size: 20px;
+  }
+  img {
+    margin-left: 30px;
+    width: 20px;
+    height: 100%;
+  }
+}
+.filled--btn {
+  border: 2px solid $color--accent;
+  background: $color--accent;
+  
+  span {
+    color: $color--white;
+  }
+  
+  .icon_color {
+    display: none;
+  }
+  
+  &:hover {
+    opacity: 1;
+    background: $color--white;
+    span {
+      color: $color--accent;
+    }
+    .icon_color {
+      display: block;
+    }
+    .icon_white {
+      display: none;
+    }
+  }
+
+}
+.outline--btn {
+  border: 2px solid $color--accent;
+  background: $color--white;
+
+  span {
+    color: $color--accent;
+  }
+
+  .icon_white {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 1;
+    background: $color--accent;
+    span {
+      color: $color--white;
+    }
+    .icon_white {
+      display: block;
+    }
+    .icon_color {
+      display: none;
+    }
+  }
+
+}
+
+
+// ==============================================
+// pageLoader
+// ==============================================
+.pageLoader {
+    // display: none;
+    @include absolute(initial, initial, 0, 0, 0, 0, $color--base, initial, 999);
+    position: fixed;
+    
+    &__inner {
+      @include absolute(initial, initial, 0, 0, 0, 0, initial, initial, initial);
+      @include flex(center, center, initial);
+    }
+  
+    &__logo {
+      
+      span {
+        color: $color--main;
+        font-size: 28px;
+      }
+
+      img {
+        width: 140px;
+        height: auto;
+      }
+    }
+  
+  }
+  
+  // ローディングアイコンのcssを下記にコピペ
+  .sk-cube-grid {
+    width: 40px;
+    height: 40px;
+    margin: 0px auto 30px;
+  }
+  .sk-cube-grid .sk-cube {
+    width: 33%;
+    height: 33%;
+    background-color: $color--main;
+    float: left;
+    -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+    animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+  }
+  .sk-cube-grid .sk-cube1 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  .sk-cube-grid .sk-cube2 {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+  .sk-cube-grid .sk-cube3 {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s; }
+  .sk-cube-grid .sk-cube4 {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; }
+  .sk-cube-grid .sk-cube5 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  .sk-cube-grid .sk-cube6 {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+  .sk-cube-grid .sk-cube7 {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s; }
+  .sk-cube-grid .sk-cube8 {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; }
+  .sk-cube-grid .sk-cube9 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  @-webkit-keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1); 
+    }
+  }
+  @keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1);
+    } 
+}
+// ローディングアイコンのcssはここまで
+
+
+// ==============================================
+// header
+// ==============================================
+.header {
+  padding: 20px 0;
+  @include absolute(100%, initial, 0, 0, initial, initial, initial, initial, 998);
+
+  .container {
+    @include flex(center, center, initial);
+  }
+
+  &__left {
+    a {
+      span {
+        color: $color--white;
+        font-size: 24px;
+      }
+      img {
+        width: 120px;
+        height: auto;
+      }
+    }
+  }
+
+  &__right {
+    margin-left: auto;
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      li {
+        text-align: center;
+        a {
+          // padding: 0 10px;
+          color: $color--white;
+          @include flex(center,center,wrap);
+          span {
+            width: 100%;
+            display: block;
+          }
+        }
+      }
+    }
+
+  }
+
+  &__contact__btn {
+    margin-left: 10px;
+    a {
+      padding: 12px 30px !important;
+      font-size: 18px;
+      text-transform: uppercase;
+      background: $color--main !important;
+      border: 2px solid $color--main;
+      &:hover {
+        background: $color--white !important;
+        color: $color--main;
+        opacity: 1;
+      }
+    }
+  }
+
+}
+.menu--en {
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: $color--white;
+  text-transform: uppercase;
+}
+.menu--ja {
+  font-size: 12px;
+  color: $color--white;
+  text-transform: uppercase;
+}
+
+// ==============================================
+// footer
+// ==============================================
+.footer {
+  padding: 30px 0 20px;
+  background: $color--text;
+
+  &__link {
+    margin-bottom: 30px;
+
+    nav ul {
+      @include flex(center, center, initial);
+      li {
+        a {
+          padding: 0px 20px;
+          color: $color--white;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+  }
+
+  &__copyright {
+    position: relative;
+    p {
+      margin-top: 20px;
+      text-align: center;
+      color: $color--white;
+      font-size: 12px;
+    }
+  }
+
+  &__logo {
+    text-align: center;
+    span {
+      color: $color--white;
+      font-size: 22px;
+    }
+    img {
+      margin: 0 auto;
+      width: 100px;
+      height: auto;
+    }
+  }
+
+  &__top__btn {
+    @include absolute(50px, 50px, initial, 0, 0, initial, $color--black, initial, 1);
+    @include flex(center, center, initial);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover {
+      opacity: .7;
+    }
+    img {
+      width: 30px;
+      height: auto;
+    }
+  }
+
+}
+
+
+// ==============================================
+// spMenu
+// ==============================================
+.spMenu {
+  display: none;
+  // display: block;
+  @include absolute(60px, 60px, 0, 0, initial, initial, initial, initial, 998);
+  position: fixed;
+  box-sizing: border-box;
+  transition: all .3s;
+
+  &.active {
+    .spMenu__bar {
+      background: $color--white;
+    }
+    .spMenu__text {
+      span {
+        color: $color--main;
+      }
+    }
+  }
+
+  &__bar {
+    width: 100%;
+    height: 100%;
+    background: $color--main;
+    @include flex(center, center, initial);
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  &__trigger,
+  &__trigger span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+  }
+
+  &__trigger {
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    & > span {
+      width: 35px;
+      text-align: center;
+    }
+
+  }
+
+  &__hamburger {
+    margin-top: 2px;
+    width: 35px;
+    height: 22px;
+    position: relative;
+
+    &.active {
+      span {
+        &:nth-of-type(1) {
+          -webkit-transform: translateY(12px) rotate(-45deg);
+          transform: translateY(11px) rotate(-45deg);
+          background: $color--main;
+        }
+        &:nth-of-type(2) {
+          opacity: 0;
+        }
+        &:nth-of-type(3) {
+          -webkit-transform: translateY(-9px) rotate(45deg);
+          transform: translateY(-9px) rotate(45deg);
+          background: $color--main;
+        }
+      }
+    }
+
+    span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: $color--white;
+      &:nth-of-type(2) {
+        top: 10px;
+      }
+      &:nth-of-type(3) {
+        bottom: 0;
+      }
+    }
+
+  }
+
+  &__text {
+      span {
+        // text-transform: uppercase;
+        color: $color--white;
+        font-size: 12px;
+      }
+  }
+  
+}
+// ==============================================
+// pageMain
+// ==============================================
+.pageMain {
+  
+}
