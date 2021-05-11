@@ -1,0 +1,31 @@
+
+// ----------- color -----------
+// サイトカラーをここで設定
+$color--base: #eeeeee; // ベースカラー
+$color--main: #04009a; // メインカラー
+$color--text: #333333; // テキストカラー
+$color--accent: #9A0025; // アクセントカラー
+
+$color--white: #ffffff;
+$color--black: #000000;
+
+
+// ----------- mixin -----------
+@mixin absolute($width, $height, $top, $right, $bottom, $left, $bgc, $transform, $z) {
+    width: $width;
+    height: $height;
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    background: $bgc;
+    transform: $transform;
+    z-index: $z;
+}
+@mixin flex($jc, $ai, $fw) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-wrap: $fw;
+}

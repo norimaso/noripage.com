@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 自動リンクを無効にする -->
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- 設定①：ページタイトルはここ -->
+    <title>松栄庵</title>
+
+    <!-- meta -->
+
+    <!-- 設定②：favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/img/favicon_.ico"> <!-- PC favicon -->
+    <link rel="apple-touch-icon" href="assets/images/img/favicon.png"> <!-- SP favicon -->
+
+    <!--
+        css
+        wordpressを想定してcssを分けています
+    -->
+    <!-- 共通のcss -->
+    <link rel="stylesheet" type="text/css" href="assets/css/base.css">
+    <!-- フロントページ用のcss -->
+    <link rel="stylesheet" type="text/css" href="assets/css/top.css">
+    <!-- 下層ページ用のcss -->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/sub.css"> -->
+    <!-- レスポンシブ用のcss -->
+    <link rel="stylesheet" type="text/css" href="assets/css/sp.css">
+
+    <!-- web font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Start pageLoader -->
+    <div class="pageLoader">
+        <div class="pageLoader__inner">
+            <div class="pageLoader__cont">
+
+                <!--
+                    ローディングアイコンのHTMLを下記にコピペ
+                    参考サイト: https://tobiasahlin.com/spinkit/
+                -->
+                <div class="sk-cube-grid">
+                    <div class="sk-cube sk-cube1"></div>
+                    <div class="sk-cube sk-cube2"></div>
+                    <div class="sk-cube sk-cube3"></div>
+                    <div class="sk-cube sk-cube4"></div>
+                    <div class="sk-cube sk-cube5"></div>
+                    <div class="sk-cube sk-cube6"></div>
+                    <div class="sk-cube sk-cube7"></div>
+                    <div class="sk-cube sk-cube8"></div>
+                    <div class="sk-cube sk-cube9"></div>
+                </div>
+                <!-- ここまで -->
+
+                <div class="pageLoader__logo">
+
+                    <!-- 設定③：テキストロゴならここに名称を記載 -->
+                    <span>Loading...</span>
+
+                    <!-- 画像ロゴならimages/img/の後にファイル名を記載 -->
+                    <img src="assets/images/img/udon_logo.png" alt="サイトタイトル｜サイト詳細テキスト">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End page_loader -->
+
+    <!-- Start spMenu -->
+    <div class="spMenu">
+        <div class="spMenu__bar">
+            <a class="spMenu__trigger">
+                <span>
+                    <div class="spMenu__hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="spMenu__text">
+                        <span>menu</span>
+                    </div>
+                </span>
+            </a>
+        </div>
+    </div>
+    <!-- End spMenu -->
+
+    <!-- Start header -->
+    <header class="header">
+        <div class="container">
+
+            <div class="header__left">
+                <a href="#">
+                    <h1>
+
+                        <!-- 設定④：テキストロゴならここに名称を記載 -->
+                        <!-- <span>ワイ。</span> -->
+
+                        <!-- 画像ロゴならimages/img/の後にファイル名を記載 -->
+                        <img src="assets/images/img/udon_logo.png" alt="サイトタイトル｜サイト詳細テキスト">
+
+                    </h1>
+                </a>
+            </div>
+
+            <div class="header__right">
+                <nav>
+                    <ul>
+
+                        <!-- 設定⑤：ここからグローバルナビ -->
+                        <li>
+                            <a href="#">
+                                <span class="menu--en">top</span>
+                                <span class="menu--ja">トップ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="menu--en">about</span>
+                                <span class="menu--ja">松栄庵について</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="menu--en">menu</span>
+                                <span class="menu--ja">お品書き</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="menu--en">news</span>
+                                <span class="menu--ja">お知らせ</span>
+                            </a>
+                        </li>
+                        <li class="header__contact__btn">
+                            <a class="btn filled--btn" href="#">お問い合わせ</a>
+                        </li>
+                        <!-- グローバルナビはここまで -->
+
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+    <!-- End header -->
+
+    <div class="pageMain fadeIn--btt">
+
+        <!-- Start mv -->
+        <div class="mv">
+            <div class="mv__slider"></div>
+            <div class="mv__title">
+                <h1>
+
+                    <!-- 設定⑥：テキストタイトルならここに名称を記載 -->
+                    <span>皆様のお越しを心よりお待ちしております。</span>
+
+                    <!-- 画像タイトルならimages/img/の後にファイル名を記載 -->
+                    <!-- <img src="assets/images/img/logo.png" alt="キャッチコピー"> -->
+
+                </h1>
+            </div>
+        </div>
+        <!-- End mv -->
+
+        <!-- Start main -->
+        <div class="main">
+
+            <!-- section 01 -->
+            <section class="main__section section section1 fadeIn--btt">
+                <div class="container">
+
+                    <div class="section__title">
+                        <span>松栄庵について</span>
+                        <h2>ABOUT</h2>
+                    </div>
+
+                    <div class="section__cont">
+
+                        <!-- 設定⑦：この中に任意のセクションコンテンツを記載 -->
+                        <p style="text-align: center; font-weight: bold;">さいたま市北区のそばとうどんの店</p><br>
+                        <div class="section_img" style="text-align: center;">
+                            <img src="assets/images/img/ma_02.jpg" alt="うどん そば" style="display: inline-block; width: 40%;">
+                            <img src="assets/images/img/ma_03.jpg" alt="うどん そば" style="display: inline-block; width: 40%;">
+                        </div>
+                        <br>
+                        <div class="about-area" style="text-align: center;">
+                            <p>営業時間　11:30~19:30（ラストオーダー19:00）</p><br>
+                            <p>ランチタイム　11:30~14:00</p><br>
+                            <p>木曜日はランチタイムのみ営業</p><br>
+                            <p>不定休有り</p><br>
+                            <p>全て税込価格・お支払いは現金のみとなります</p>
+                        </div>
+                        <!-- セクションコンテンツここまで -->
+
+                    </div>
+
+                    <div class="section__btn">
+                        <a class="btn filled--btn" href="#">
+                            <span>詳細をみる</span>
+                            <img class="icon_white" src="assets/images/svg/next_white.svg" alt="→">
+                            <img class="icon_color" src="assets/images/svg/next_color.svg" alt="→">
+                        </a>
+                    </div>
+
+                </div>
+            </section> <!-- section 01  till here -->
+
+            <!-- section 02 -->
+            <section class="main__section section section2 fadeIn--btt">
+                <div class="container">
+
+                    <div class="section__title">
+                        <span>お品書き</span>
+                        <h2>menu</h2>
+                    </div>
+
+                    <div class="section__cont">
+
+                        <!-- 設定⑦：この中に任意のセクションコンテンツを記載 -->
+                        <p style="text-align: center; font-weight: bold;">名物は大きなかき揚げ 大人気 鴨南ばん＆鴨汁 平日限定天ぷらランチ天丼ランチ税込690円〜</p><br>
+                        <p>さいたま市北区に根付く、創業４０年のそばうどんの店。家族で明るく元気に営業しております。こだわりの白いそば、細切りのうどん。丁寧にとった出汁から作るもりづゆ、かけづゆ、鴨汁。ゆったり寛げる店内でお食事をお楽しみください。お座敷・駐車場有り。</p><br>
+                        <p style="text-align: center; font-weight: bold;">お持ち帰り出来ます</p><br>
+                        <p style="text-align: center;">【テイクアウトメニュー】リニューアルしました☆当店自慢の鴨汁！抹茶の爽やかな苦味を感じる茶そば！季節限定ごまだれもお持ち帰りいただけます♪事前の電話予約で時短受取おすすめです☆</p><br>
+                        <div class="section_tel" style="text-align: center; font-size: 1.5rem;">
+                            <a href="tel:048-652-3957" style="color:black; background:linear-gradient(transparent 70%, #FFFF00 0%);">048-652-3957</a>
+                        </div>
+                        <br>
+                        <div class="section_img" style="text-align: center;">
+                            <img src="assets/images/img/menu.jpg" alt="うどん そば" style="display: inline-block; width: 60%; height: 300px">
+                        </div>
+                        <!-- セクションコンテンツここまで -->
+
+                    </div>
+
+                    <div class="section__btn">
+                        <a class="btn outline--btn" href="#">
+                            <span>詳細をみる</span>
+                            <img class="icon_white" src="assets/images/svg/next_white.svg" alt="→">
+                            <img class="icon_color" src="assets/images/svg/next_color.svg" alt="→">
+                        </a>
+                    </div>
+
+                </div>
+            </section><!-- section 02  till here -->
+
+            <!-- section 03 -->
+            <section class="main__section section section3 fadeIn--btt">
+                <div class="container">
+
+                    <div class="section__title">
+                        <span>お知らせ</span>
+                        <h2>news</h2>
+                    </div>
+
+                    <div class="section__cont">
+
+                        <!-- 設定⑦：この中に任意のセクションコンテンツを記載 -->
+                        <p style="text-align: center; font-size: 1.2rem;">【新型コロナウイルス対策について】</p>
+                        <br>
+                        <p style="text-align: center;">いつも当店をご利用頂き誠にありがとうございます。感染対策を講じ、通常営業をさせて頂いております。</p>
+                        <p style="text-align: center;">店舗従事者全員の体調管理の徹底、テーブル・メニュー・店内各所の定期的な除菌、接客時のマスク着用</p>
+                        <p style="text-align: center;">上記の対策を講じ、お客様に安心してお食事をお楽しみ頂けるよう努めてまいります。</p>
+                        <br>
+                        <p style="text-align: center;">お食事時以外のマスクの着用・手指の消毒のご協力をお願い致します。</p>
+                        <!-- セクションコンテンツここまで -->
+
+                    </div>
+
+                    <div class="section__btn">
+                        <a class="btn filled--btn" href="#">
+                            <span>詳細をみる</span>
+                            <img class="icon_white" src="assets/images/svg/next_white.svg" alt="→">
+                            <img class="icon_color" src="assets/images/svg/next_color.svg" alt="→">
+                        </a>
+                    </div>
+
+                </div>
+            </section><!-- section 02  till here -->
+
+        </div>
+        <!-- End main -->
+
+        <!-- Start footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__link">
+                    <nav>
+                        <ul>
+
+                            <!-- 設定⑧：ここからフッターリンク -->
+                            <li><a href="#">top</a></li>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">menu</a></li>
+                            <li><a href="#">news</a></li>
+                            <li><a href="#">contact</a></li>
+                            <!-- ここまでフッターリンク -->
+
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__copyright">
+                    <div class="footer__logo">
+
+                        <!-- 設定⑧：テキストロゴならここに名称を記載 -->
+                        <!-- <span>ワイ。</span> -->
+
+                        <!-- 画像ロゴならimages/img/の後にファイル名を記載 -->
+                        <img src="assets/images/img/udon_logo.png" alt="サイトタイトル｜サイト詳細テキスト">
+
+                    </div>
+                    <p>©︎shoueian All Rights Reserved.</p>
+                    <div class="footer__top__btn">
+                        <img src="assets/images/svg/top.svg" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+        <!-- End footer -->
+    </div>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+</html>
